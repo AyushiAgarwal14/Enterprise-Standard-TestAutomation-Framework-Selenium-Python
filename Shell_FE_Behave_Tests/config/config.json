@@ -1,0 +1,38 @@
+{
+  "username": "k.kannamuchanal",
+  "accessKey": "2i6hfCy8pbNZDadI5xVuQymwJcbWzIYxZLIqA5nhCqVP2PhUx1",
+
+  "capabilities": {
+  "LT:Options": {
+    "visual": true,
+    "video": true,
+    "build": "LT-Selenium",
+    "project": "Selenium-POC",
+    "selenium_version": "4.11.0",
+    "w3c": true
+  }
+},
+  "environments": [
+    {
+    "LT:Options": {
+      "browserName": "MicrosoftEdge",
+      "browserVersion": "119.0",
+      "platformName": "Windows 11"
+    }
+    },
+    {
+    "LT:Options": {
+      "browserName": "Chrome",
+      "browserVersion": "116.0",
+      "platformName": "Windows 11"
+    }
+    },
+    {
+    "LT:Options": {
+      "browserName": "Firefox",
+      "browserVersion": "118.0",
+      "platformName": "Windows 11"
+    }
+    }
+  ]
+}
