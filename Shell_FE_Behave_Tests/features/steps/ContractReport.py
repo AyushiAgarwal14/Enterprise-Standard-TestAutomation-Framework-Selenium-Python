@@ -43,3 +43,6 @@ def step_impl(context):
 def step_impl(context):
      
      context.forecast_function.click_Node()
+     context.forecast_function.highlight_tag_name()
+     context.forecast_function.click_job_scheduler()
+     context.forecast_function.highlight_success_message() 

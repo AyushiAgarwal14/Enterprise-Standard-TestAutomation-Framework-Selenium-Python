@@ -2,13 +2,13 @@ from behave import *
 from Shell_FE_Behave_Tests.ApplicationLibrary.FunctionalLibrary.ForecastContextFunctions import F1
 #from Shell_FE_Selenium_Core.Utilities.AssertionUtilities import AssertionUtilities
 
-@given('user opens the rs1 application and runs the PUDApproval Report')
+@given('user opens the rs1 application and runs the PUDGreaterthan5BirthYear Report')
 def step_impl(context):
         context.forecast_function = F1()
         context.forecast_function.access_Rs1()
 
 
-@When('user selects resource context and select PUDApproval Report')
+@When('user selects resource context and select PUDGreaterthan5BirthYear Report')
 def step_impl(context):
     context.forecast_function.click_context_dropdown()
     context.forecast_function.click_forecast_context()
@@ -17,7 +17,7 @@ def step_impl(context):
     context.forecast_function.click_PUD_reports()
 
     context.forecast_function.click_Report_dropdown()
-    context.forecast_function.click_PUDApproval_Report()
+    context.forecast_function.click_PUDGreaterthan5BirthYear_Report()
 
     context.forecast_function.click_hierarchy_dropwdown()
     context.forecast_function.click_AoO_LoB_Field()
@@ -29,10 +29,9 @@ def step_impl(context):
     context.forecast_function.click_No_filter()
   
     
-@When('user selects the desired report options in PUDApproval Report')
+@When('user selects the desired report options in PUDGreaterthan5BirthYear Report')
 def step_impl(context):
-
-    context.forecast_function.click_Report_header()
+      
     context.forecast_function.click_Report_option()
     context.forecast_function.click_Include_objective()
     context.forecast_function.click_Subtotal()
@@ -43,10 +42,10 @@ def step_impl(context):
     context.forecast_function.click_Include_footer()
 
 
-@Then('user clicks the report viewer and generates the report in PUDApproval Report')
+@Then('user clicks the report viewer and generates the report in PUDGreaterthan5BirthYear Report')
 def step_impl(context):
      
      context.forecast_function.click_Node()
-     context.forecast_function.highlight_tag_name() 
+     context.forecast_function.highlight_tag_name()
      context.forecast_function.click_job_scheduler()
      context.forecast_function.highlight_success_message() 

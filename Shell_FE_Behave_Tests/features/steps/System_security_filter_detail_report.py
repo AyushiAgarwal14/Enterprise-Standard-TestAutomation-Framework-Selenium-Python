@@ -2,22 +2,22 @@ from behave import *
 from Shell_FE_Behave_Tests.ApplicationLibrary.FunctionalLibrary.ForecastContextFunctions import F1
 #from Shell_FE_Selenium_Core.Utilities.AssertionUtilities import AssertionUtilities
 
-@given('user opens the rs1 application and runs the PUDApproval Report')
+@given('user opens the rs1 application and runs the System_security_filter_detail Report')
 def step_impl(context):
         context.forecast_function = F1()
         context.forecast_function.access_Rs1()
 
 
-@When('user selects resource context and select PUDApproval Report')
+@When('user selects resource context and select System_security_filter_detail Report')
 def step_impl(context):
     context.forecast_function.click_context_dropdown()
     context.forecast_function.click_forecast_context()
 
     context.forecast_function.click_Report_group()
-    context.forecast_function.click_PUD_reports()
+    context.forecast_function.click_All_reports()
 
     context.forecast_function.click_Report_dropdown()
-    context.forecast_function.click_PUDApproval_Report()
+    context.forecast_function.click_System_security_filter_detail()
 
     context.forecast_function.click_hierarchy_dropwdown()
     context.forecast_function.click_AoO_LoB_Field()
@@ -29,24 +29,18 @@ def step_impl(context):
     context.forecast_function.click_No_filter()
   
     
-@When('user selects the desired report options in PUDApproval Report')
+@When('user selects the desired report options in System_security_filter_detail Report')
 def step_impl(context):
-
-    context.forecast_function.click_Report_header()
+      
     context.forecast_function.click_Report_option()
-    context.forecast_function.click_Include_objective()
-    context.forecast_function.click_Subtotal()
-    context.forecast_function.click_Product_group_selection()
-    context.forecast_function.click_Approval_State()
-    context.forecast_function.click_Streams()
-    context.forecast_function.click_Output_Type()
-    context.forecast_function.click_Include_footer()
+    context.forecast_function.click_Report_type_option1()
+    
+    
 
-
-@Then('user clicks the report viewer and generates the report in PUDApproval Report')
+@Then('user clicks the report viewer and generates the System_security_filter_detail report')
 def step_impl(context):
      
      context.forecast_function.click_Node()
-     context.forecast_function.highlight_tag_name() 
+     context.forecast_function.highlight_tag_name()
      context.forecast_function.click_job_scheduler()
      context.forecast_function.highlight_success_message() 
